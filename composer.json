@@ -14,7 +14,7 @@
             "email": "sirabdull70@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "beta",
     "require": {
         "php": ">=7.4",
         "ext-json": "*",
