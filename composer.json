@@ -1,0 +1,27 @@
+{
+    "name": "bayscope/b-frame",
+    "description": "A PHP framework for developing bayscope projects",
+    "type": "project",
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "Bayscope\\Bframe\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sirabdull",
+            "email": "sirabdull70@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-pdo": "*",
+        "ext-pdo_sqlite": "*",
+        "bframe/framework" : "*",
+        "twig/twig": "4.x-dev"
+    }
+}
