@@ -1,11 +1,12 @@
 {
-    "name": "bayscope/b-frame",
+    "name": "bayscope/bframe",
     "description": "A PHP framework for developing bayscope projects",
     "type": "project",
     "license": "mit",
     "autoload": {
         "psr-4": {
-            "Bayscope\\Bframe\\": "src/"
+            "Bayscope\\": "src/",
+            "Vendor\\": "Vendor/"
         }
     },
     "authors": [
@@ -21,6 +22,7 @@
         "ext-mbstring": "*",
         "ext-pdo": "*",
         "ext-pdo_sqlite": "*",
+        "bframe/framework":"*",
         "twig/twig": "4.x-dev"
     }
 }

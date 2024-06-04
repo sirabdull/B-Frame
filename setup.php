@@ -1,5 +1,7 @@
 <?php
 
+use Twig\Node\Expression\Binary\AbstractBinary;
+
 $directories = [
     'app/controllers',
     'app/models',
