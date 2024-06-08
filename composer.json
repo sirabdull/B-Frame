@@ -15,14 +15,14 @@
             "email": "sirabdull70@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=7.4",
         "ext-json": "*",
         "ext-mbstring": "*",
         "ext-pdo": "*",
         "ext-pdo_sqlite": "*",
-        "bframe/framework":"[dev-main]",
+        "bframe/framework":"1.0.0",
         "twig/twig": "4.x-dev"
     }
 }
