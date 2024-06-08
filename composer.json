@@ -22,7 +22,7 @@
         "ext-mbstring": "*",
         "ext-pdo": "*",
         "ext-pdo_sqlite": "*",
-        "bframe/framework":"*",
+        "bframe/framework":"[dev-main]",
         "twig/twig": "4.x-dev"
     }
 }
