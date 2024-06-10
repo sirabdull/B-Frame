@@ -23,6 +23,7 @@
         "ext-pdo": "*",
         "ext-pdo_sqlite": "*",
         "bframe/framework":"1.0.0",
-        "twig/twig": "4.x-dev"
+        "twig/twig": "4.x-dev",
+        "illuminate/database": "^11.10"
     }
 }
