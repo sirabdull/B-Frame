@@ -1,0 +1,68 @@
+<?php
+
+$command = $argv[1];
+
+switch($command){
+  case 'start' :
+        startserver();
+         break;
+  case 'storage-link' :
+      storageLink();
+      break;
+ default :
+    echo('Unknown command');
+
+}
+
+function startserver(){
+$host = 'localhost';
+$port ='7000';
+$root = 'public';
+    
+    echo " starting php server at 'http://$host:$port\n";
+   $command = sprintf('php -S %s:%s -t %s',$host, $port, $root);
+    passthru(
+        $command
+    );
+}
+
+
+   
+function storageLink()
+{
+    $target = __DIR__ . '\storage\app\public';
+    $link = __DIR__ . '\public\storage'; // Adjusted path to point to the public directory
+
+    if (!is_link($link)) {
+        if (!file_exists($target)) {
+            echo "The target directory does not exist: $target\n";
+            return;
+        }
+
+        if (!file_exists(dirname($link))) {
+            echo "The link directory does not exist: " . dirname($link) . "\n";
+            return;
+        }
+
+        // Ensure paths are enclosed in quotes
+        $command = sprintf('mklink /D "%s" "%s"', $link, $target);
+        exec($command, $output, $return_var);
+
+        // Check if the symbolic link now exists to confirm creation was successful
+        if (is_link($link)) {
+            echo "Symbolic link created: $link -> $target\n";
+        } else {
+            if ($return_var !== 0) { // If the return_var is not 0, the command failed.
+                if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+                    echo "Failed to create symbolic link: $link -> $target\n";
+                    echo "If you're seeing this message on Windows, please run this script as an Administrator.\n";
+                } else {
+                    echo "Failed to create symbolic link: $link -> $target\n";
+                }
+            }
+        }
+    } else {
+        unlink($link);
+        echo "Symbolic link already exists: $link -> $target\n";
+    }
+}

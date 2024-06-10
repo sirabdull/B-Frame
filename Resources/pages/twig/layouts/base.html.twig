@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Title {% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}"> <!-- Ensure you have a CSS file at this path -->
+</head>
+<body>
+ <header>
+        <h1>Welcome to Bframe</h1>
+</header>
+
+{% block main %}
+   
+{% endblock %}
+    <footer>
+        <p>&copy; {{ "now"|date("Y") }} BayScope  All rights reserved.</p>
+    </footer>
+    <script src="{{ asset('js/script.js') }}"></script> <!-- Ensure you have a JS file at this path -->
+</body>
+</html>

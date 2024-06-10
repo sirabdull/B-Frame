@@ -2,6 +2,7 @@
 
 use Bframe\Routing\Router;
 use Bframe\HTTP\Response;
+use Bframe\HTTP\compiler;
 use Bframe\HTTP\Request;
 
 /**
@@ -11,13 +12,24 @@ use Bframe\HTTP\Request;
  * 
  * You can either reurn a Response class in a callback , a controller and method, or a full Bframe component.
  * 
- * @return Response 
+ * 
  * 
  * 
  */
 
+ // Example usage within a routing setup
+//  Router::get('/assets/{path}', function($path) {
+//      $assetLoader = new compiler(__DIR__ . '/../Resources');
+//      $assetLoader->serveAsset($path);
+//  });
 
-     Router::get('/', function(){
+ Router::get('/test/{id}', function ($id)  {
+     return  $id;
+ } );
 
-                return  Response::page('welcome');
-        });
+
+ Router::get('/', function(){
+
+    return  Response::page('welcome', ['title' => 'BayScope']);
+  });
+

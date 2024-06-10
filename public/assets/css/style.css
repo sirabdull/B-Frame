@@ -1,0 +1,48 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color:#333;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    background-color: #f0f0f0; /* Light grey background */
+    margin: 20px auto;
+    max-width: 800px; /* Max width for the main content */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Simple box shadow */
+}
+main p {
+    line-height: 1.6; /* Increase line height for better readability */
+    margin-bottom: 20px; /* Add some space between paragraphs */
+}
+section{
+    padding: 20px;
+    background-color: #333; /* Light grey background */
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    
+    margin: 20px auto;
+    max-width: 800px; /* Max width for the main content */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Simple box shadow */
+}
+
+footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
